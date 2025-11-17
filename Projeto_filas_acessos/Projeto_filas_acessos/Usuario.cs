@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +8,25 @@ namespace Projeto_filas_acessos
 {
     internal class Usuario
     {
+        //Propriedades
         private int _id;
         private string _nome;
-        private List<Ambiente> ambientes;
+        private List<Ambiente> _ambientes;
 
         //Construtor
+        public Usuario()
+        {
+            Id = 0;
+            Nome = "";
+            Ambientes = new List<Ambiente>();
+        }
 
+        public Usuario(int id, string nome)
+        {
+            Id = id;
+            Nome = nome;
+            Ambientes = new List<Ambiente>();
+        }
 
         //Getters e Setters
 
@@ -31,15 +44,16 @@ namespace Projeto_filas_acessos
 
         public List<Ambiente> Ambientes
         {
-            get { return ambientes; }    
+            get { return _ambientes; }
+            set { _ambientes = value; }
         }
 
-        //M[etodo
+        //Metodos
         public bool ConcederPermissao(Ambiente ambientes)
         {
             if (ambientes == null)
             {
-                throw new ArgumentNullException(nameof(ambientes));
+                return false;
             }
 
             if (Ambientes.Contains(ambientes))
@@ -51,14 +65,23 @@ namespace Projeto_filas_acessos
             return true;
         }
 
-        public bool RevogarPermissoes(Ambiente ambientes)
+        public bool RevogarPermissoes(Ambiente ambiente)
         {
-            if (ambientes == null)
+            if (ambiente == null)
             {
-                throw new ArgumentNullException(nameof(ambientes));
+                return false;
             }
 
-            return (Ambientes.Remove(ambientes));
+            if (Ambientes.Contains(ambiente))
+            {
+                Ambientes.Remove(ambiente);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }
