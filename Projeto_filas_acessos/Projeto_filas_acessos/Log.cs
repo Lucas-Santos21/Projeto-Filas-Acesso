@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,25 +8,21 @@ namespace Projeto_filas_acessos
 {
     internal class Log
     {
+        //Propriedades
         private DateTime _dtAcesso;
         private Usuario _usuario;
         private bool _tipoAcesso;
 
         //Construtores
-        public Log()
-        {
 
-        }
-
-        public Log(DateTime dtAcesso, Usuario usuario, bool tipoAcesso)
+        public Log( Usuario usuario, bool tipoAcesso)
         {
-            DtAcesso = dtAcesso;
+            DtAcesso = DateTime.Now;
             Usuario = usuario;
             TipoAcesso = tipoAcesso;
         }
 
         //Getters e Setters
-
         public DateTime DtAcesso {
 
             get { return _dtAcesso; }
@@ -45,9 +41,5 @@ namespace Projeto_filas_acessos
             set { _tipoAcesso = value; }
         }
 
-        public string ObterTipoAcesso()
-        {
-            return TipoAcesso ? "Autorizado" : "Negado";
-        }
     }
 }
