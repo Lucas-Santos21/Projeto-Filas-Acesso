@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +8,17 @@ namespace Projeto_filas_acessos
 {
     internal class Ambiente
     {
+        //Propriedades
         private int _id;
         private string _nome;
-        private Queue<Log> logs;
-        private const int _maxLogs = 100;
+        private Queue<Log> _logs;
 
         //Construtor
         public Ambiente(int id, string nome)
         {
             Id = id;
             Nome = nome;
+            Logs = new Queue<Log>();
         }
 
         //Getter e Setter
@@ -35,7 +36,8 @@ namespace Projeto_filas_acessos
 
         public Queue <Log> Logs
         {
-            get { return logs; }
+            get { return _logs; }
+            set { _logs = value; }
         }
 
         //Método
@@ -44,11 +46,13 @@ namespace Projeto_filas_acessos
         { 
             if (log == null)
             {
-                throw new ArgumentNullException(nameof(log));
+                Console.WriteLine("O log recebido é nulo");
+                return;
             }
-            if(Logs.Count >= _maxLogs)
+            if(Logs.Count >= 100)
             {
-                Logs.Dequeue();
+                Console.WriteLine("Quantidade maxima de logs no ambiente atingida!");
+                return;
             }
             Logs.Enqueue(log);
         }
