@@ -1,78 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    ".NETFramework,Version=v8.0": {},
+    ".NETFramework,Version=v8.0/win7-x86": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0": []
+    ".NETFramework,Version=v8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Orlando\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orlando\\Desktop\\ExEstrDados\\Projeto_Filas_Acessos\\Projeto_filas_acessos\\Projeto_filas_acessos\\Projeto_filas_acessos.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Documentos\\faculdade\\quarto semestre\\Estrutura de Dados 2\\Projeto-Filas-Acesso\\Projeto_filas_acessos\\Projeto_filas_acessos\\Projeto_filas_acessos.csproj",
       "projectName": "Projeto_filas_acessos",
-      "projectPath": "C:\\Users\\Orlando\\Desktop\\ExEstrDados\\Projeto_Filas_Acessos\\Projeto_filas_acessos\\Projeto_filas_acessos\\Projeto_filas_acessos.csproj",
-      "packagesPath": "C:\\Users\\Orlando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orlando\\Desktop\\ExEstrDados\\Projeto_Filas_Acessos\\Projeto_filas_acessos\\Projeto_filas_acessos\\obj\\",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Documentos\\faculdade\\quarto semestre\\Estrutura de Dados 2\\Projeto-Filas-Acesso\\Projeto_filas_acessos\\Projeto_filas_acessos\\Projeto_filas_acessos.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\Documentos\\faculdade\\quarto semestre\\Estrutura de Dados 2\\Projeto-Filas-Acesso\\Projeto_filas_acessos\\Projeto_filas_acessos\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Orlando\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net80"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net80": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48",
-          "net481"
-        ],
-        "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+      "net80": {}
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
       }
     }
   }

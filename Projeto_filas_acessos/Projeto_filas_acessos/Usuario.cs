@@ -31,15 +31,15 @@ namespace Projeto_filas_acessos
         //Getters e Setters
 
         public int Id
-        { 
-            get { return _id; } 
-            set { _id = value; } 
+        {
+            get { return _id; }
+            set { _id = value; }
         }
 
-        public string Nome 
-        { 
-            get { return _nome; } 
-            set { _nome = value; } 
+        public string Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
         }
 
         public List<Ambiente> Ambientes
@@ -49,23 +49,23 @@ namespace Projeto_filas_acessos
         }
 
         //Metodos
-        public bool ConcederPermissao(Ambiente ambientes)
+        public bool concederPermissao(Ambiente ambiente)
         {
-            if (ambientes == null)
+            if (ambiente == null)
             {
                 return false;
             }
 
-            if (Ambientes.Contains(ambientes))
+            if (Ambientes.Contains(ambiente))
             {
                 return false;
             }
 
-            Ambientes.Add(ambientes);
+            Ambientes.Add(ambiente);
             return true;
         }
 
-        public bool RevogarPermissoes(Ambiente ambiente)
+        public bool revogarPermissao(Ambiente ambiente)
         {
             if (ambiente == null)
             {

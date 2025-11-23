@@ -1,0 +1,33 @@
+CREATE DATABASE ControleAcessos
+GO
+
+USE ControleAcessos
+GO
+
+CREATE TABLE Usuario(
+	Id INT PRIMARY KEY,
+	Nome VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE Ambiente(
+	Id INT PRIMARY KEY,
+	Nome VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE Permissao(
+	UsuarioId INT NOT NULL,
+	AmbienteId INT NOT NULL,
+	PRIMARY KEY (UsuarioId, AmbienteId),
+	FOREIGN KEY (UsuarioId) REFERENCES Usuario(Id),
+	FOREIGN KEY (AmbienteId) REFERENCES Ambiente(Id)
+)
+
+CREATE TABLE LogAcesso (
+	Id INT IDENTITY PRIMARY KEY,
+	DtAcesso DATETIME NOT NULL,
+	UsuarioId INT NOT NULL,
+	AmbienteId INT NOT NULL,
+	TipoAcesso BIT NOT NULL,
+	FOREIGN KEY (UsuarioId) REFERENCES Usuario(Id),
+	FOREIGN KEY (AmbienteId) REFERENCES Ambiente(id)
+)

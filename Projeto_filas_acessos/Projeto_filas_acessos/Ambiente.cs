@@ -23,7 +23,7 @@ namespace Projeto_filas_acessos
 
         //Getter e Setter
         public int Id
-        { 
+        {
             get { return _id; }
             set { _id = value; }
         }
@@ -34,26 +34,26 @@ namespace Projeto_filas_acessos
             set { _nome = value; }
         }
 
-        public Queue <Log> Logs
+        public Queue<Log> Logs
         {
             get { return _logs; }
-            set { _logs = value; }
         }
 
         //Método
 
         public void registrarLog(Log log)
-        { 
+        {
             if (log == null)
             {
                 Console.WriteLine("O log recebido é nulo");
                 return;
             }
-            if(Logs.Count >= 100)
+
+            if (Logs.Count >= 100)
             {
-                Console.WriteLine("Quantidade maxima de logs no ambiente atingida!");
-                return;
+                Logs.Dequeue();
             }
+
             Logs.Enqueue(log);
         }
     }

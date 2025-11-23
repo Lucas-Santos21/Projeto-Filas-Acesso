@@ -14,8 +14,12 @@ namespace Projeto_filas_acessos
         private bool _tipoAcesso;
 
         //Construtores
+        public Log()
+        {
 
-        public Log( Usuario usuario, bool tipoAcesso)
+        }
+
+        public Log(Usuario usuario, bool tipoAcesso)
         {
             DtAcesso = DateTime.Now;
             Usuario = usuario;
@@ -23,19 +27,22 @@ namespace Projeto_filas_acessos
         }
 
         //Getters e Setters
-        public DateTime DtAcesso {
+        public DateTime DtAcesso
+        {
 
             get { return _dtAcesso; }
             set { _dtAcesso = value; }
         }
 
-        public Usuario Usuario {
+        public Usuario Usuario
+        {
 
             get { return _usuario; }
             set { _usuario = value; }
         }
 
-        public bool TipoAcesso {
+        public bool TipoAcesso
+        {
 
             get { return _tipoAcesso; }
             set { _tipoAcesso = value; }
